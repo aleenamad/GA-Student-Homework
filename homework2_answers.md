@@ -21,3 +21,7 @@
 // - git checkout <branch>
 // 11.Why would you want to use a branch other than the default master?
 // - To keep things organized
+// 12. Give an example for when you would use git merge and give an example for when it would be better to submit a pull request to have your branch merged
+// -You would merge when theres no need for both branches, when the other branch has completed its use. It's better to use a pull request if that branch is still needed.
+// 13. What command do you use to send all of the work that you've done locally to your remote repository?
+// - git push 
