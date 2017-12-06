@@ -13,3 +13,11 @@
 // - git checkout --
 // 7. Why is it important to use -- when changing files back to a previous state?
 // - it's important because it's promising the command line that there are no more options after '--'.
+// 8. Why might you want to reset your files back to a previous commit?
+// - To go back in case we messed something up
+// 9. What command do you use to create a branch?
+// - git branch
+// 10. What command do you use to use a different branch?
+// - git checkout <branch>
+// 11.Why would you want to use a branch other than the default master?
+// - To keep things organized
