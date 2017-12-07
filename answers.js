@@ -21,3 +21,8 @@ for (let i = 0; i <= 20; i++) {
   console.log("...human...why you taking pictures of me?...", "...the catnip made me do it...", or "...why does the red dot always get away...");
   }
 }
+// Fizz Buzz
+// Write a javascript application that logs all numbers from 1 - 100.
+for (let i = 1; i <= 100; i++) {
+  console.log(i);
+for (let i % 3; )
