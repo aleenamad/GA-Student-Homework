@@ -14,3 +14,13 @@ const checkPalindrome = (word) => {
 
 console.log(checkPalindrome("radar"));
 console.log(checkPalindrome("Borscht"));
+
+// Digit Sum
+// const sumDigits = (num) => {
+//   if (num = )
+// }
+
+
+const calculateSide = (sideA, sideB) => {
+  
+}
