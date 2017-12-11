@@ -13,3 +13,13 @@ function handleKeyPress (e) {
     movePlayer(2)
   }
 }
+
+// moving the players 
+function movePlayer (playerInt) {
+  var row = document.getElementById('player' + playerInt + '_strip')
+  var cell = document.getElementsByClassName('active' + playerInt)
+  var nextCell = row.cells[cell[0].cellIndex + 1]
+
+  cell[0].className = ''
+  nextCell.className = 'active' + playerInt
+}
