@@ -1,6 +1,7 @@
 /*
 1. A light switch that can be either on or off.
--
+- string with boolean
+- if a light is on function show light else off function light off
 2. A user's email address.
 - object:
 - const user {
@@ -29,3 +30,18 @@ const student{
 const student {
 {Name:, location, tvShows: [""] },
 }
+*/
+
+// Take it Easy
+const colorOfRainbow = ["red", "orange", "yellow","green", "blue", "indigo", "voilet"];
+
+console.log(colorOfRainbow[4]);
+
+const aleena = {
+  favoriteFood: "pizza",
+  hobby: "collect rare sneakers",
+  currentLocation: "Allen",
+  favoriteDatatype: "objects",
+}
+
+console.log(aleena.hobby);
