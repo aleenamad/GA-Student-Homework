@@ -69,3 +69,7 @@ td {
   float: left;
   background-size: cover;
 }
+
+table {
+  position: relative;
+}

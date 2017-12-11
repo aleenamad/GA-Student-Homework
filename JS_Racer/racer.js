@@ -16,12 +16,12 @@ function handleKeyPress (e) {
 // "d" key
 // moving the players
 function movePlayer (playerInt) {
-  let row = document.getElementById('player' + playerInt + '_lane')
-  let cell = document.getElementsByClassName('active' + playerInt)
+  let row = document.getElementById('player' + playerInt + '_lane');
+  let cell = document.getElementsByClassName('active' + playerInt);
   function movePlayer (playerInt) {
 
-  let nextCell = row.cells[(cell[0]).cellIndex + 1]
-  let cell = [td]
+  let nextCell = row.cells[cell[0].cellIndex + 1];
+  let cell = td;
 
   checkForVictory(nextCell, playerInt)
 
