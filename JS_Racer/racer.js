@@ -5,21 +5,36 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // handling key presses
 function handleKeyPress (e) {
-  if (e.which == 81) {
+  if (e.which == 39) {
     movePlayer(1)
   }
-
-  if (e.which == 80) {
+// right arrow key
+  if (e.which == 68) {
     movePlayer(2)
   }
 }
-
-// moving the players 
+// "d" key
+// moving the players
 function movePlayer (playerInt) {
-  var row = document.getElementById('player' + playerInt + '_strip')
-  var cell = document.getElementsByClassName('active' + playerInt)
-  var nextCell = row.cells[cell[0].cellIndex + 1]
+  let row = document.getElementById('player' + playerInt + '_lane')
+  let cell = document.getElementsByClassName('active' + playerInt)
+  function movePlayer (playerInt) {
 
+  let nextCell = row.cells[(cell[0]).cellIndex + 1]
+  let cell = [td]
+
+  checkForVictory(nextCell, playerInt)
+
+}
+{
   cell[0].className = ''
   nextCell.className = 'active' + playerInt
+}
+}
+
+function checkForVictory (nextCell, playerInt) {
+  if (nextCell === undefined) {
+    alert('Player ' + playerInt + ' wins!')
+    window.location.reload()
+  }
 }

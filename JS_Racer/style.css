@@ -30,16 +30,42 @@ h3 {
   font-size: 35px;
 }
 
+h4 {
+  font-family: 'Lobster', cursive;
+  text-align: left;
+  font-size: 13.5px;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  color: #BE98E8;
+}
+
 .racer_table td {
   background-color: white;
   height: 100px;
   width: 100px;
+
 }
 
 .racer_table td.active1 {
   background-color: #32E8BC;
+  width: 100px;
+	height: 100px;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+
 }
 
 .racer_table td.active2 {
   background-color: #FFA395;
+  width: 100px;
+	height: 100px;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+}
+
+td {
+  float: left;
+  background-size: cover;
 }
