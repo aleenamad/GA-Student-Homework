@@ -23,3 +23,23 @@ p {
   font-size: 20px;
 
 }
+
+h3 {
+  font-family: 'Lobster', cursive;
+  text-align: center;
+  font-size: 35px;
+}
+
+.racer_table td {
+  background-color: white;
+  height: 100px;
+  width: 100px;
+}
+
+.racer_table td.active1 {
+  background-color: #32E8BC;
+}
+
+.racer_table td.active2 {
+  background-color: #FFA395;
+}
