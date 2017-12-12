@@ -134,11 +134,22 @@ const bondFilms = [
   { "title" : "A View to a Kill", "year" : 1985, "actor" : "Roger Moore", "gross" : "$321,172,633" },
   { "title" : "License to Kill", "year" : 1989, "actor" : "Timothy Dalton", "gross" : "$285,157,191" }
 ];
-
+// making a function that pulls all the titles of the bond films
 const bondTitles = () => {
   for (i = 0; i < bondFilms.length; i++) {
     console.log(bondFilms[i].title);
   };
 }
-
+// so now you can create an array
 console.log(bondTitles());
+
+
+const oddBonds = () => {
+  for (i = 0; i < bondFilms.length; i++) {
+    if (bondFilms[i].year % 1 === 0) {
+      console.log(bondFilms[i].title + ", " + bondFilms[i].year);
+    }
+  };
+}
+
+console.log(oddBonds());
