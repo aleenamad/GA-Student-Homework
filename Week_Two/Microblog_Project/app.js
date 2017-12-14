@@ -27,5 +27,9 @@ function makeUL(array) {
     return list;
 }
 
-// Add the contents of options[0] to #foo:
+// Add the contents of options[0] to #post:
 document.getElementById('post').appendChild(makeUL(options[0]));
+
+
+// Create submit button
+document.getElementById('post').click();

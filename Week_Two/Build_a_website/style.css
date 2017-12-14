@@ -1,0 +1,47 @@
+h1{
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  border-bottom: 3px solid white;
+}
+h2{
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  color: white;
+  font-size: 35px;
+}
+li{
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  list-style-type: none;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+}
+
+body{
+  background-image: url("verena-yunita-yapi-203497.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+h3{
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    text-decoration: underline;
+}
+p{
+  font-family: 'Raleway', sans-serif;
+  color: white;
+}
+.Yeezy{
+  display:block;
+  margin: auto;
+  height: auto;
+  width: 50%;
+}
+h4{
+  font-family: 'Raleway', sans-serif;
+  color: white;
+}
