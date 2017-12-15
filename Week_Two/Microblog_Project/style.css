@@ -22,6 +22,8 @@ Body{
 .button-group {
   text-align: center;
   color: black;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
 
 }
 
@@ -49,7 +51,7 @@ Body{
   min-height: 42px;
   font-size: 25px;
   font-family: 'Roboto', sans-serif;
-  list-style-type: none;
+  
 }
 .posts {
   clear: both;
