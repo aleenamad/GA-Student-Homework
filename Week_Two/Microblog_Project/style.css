@@ -1,6 +1,8 @@
 h1{
 font-family: 'Roboto', sans-serif;
 text-align: center;
+border-bottom: 3px solid black;
+font-size: 50px;
 }
 
 h3{
@@ -8,7 +10,50 @@ h3{
   text-align: center;
 }
 
-div{
+
+Body{
+  background-image: url("rina-miele-400320.jpg");
+  background-size: 1550px 800px;
+  background-repeat: no-repeat;
+  display: compact;
+  background-size: cover;
+}
+
+.button-group {
   text-align: center;
-  text-decoration: none;
+  color: black;
+
+}
+
+
+.container{
+  text-align: center;
+}
+
+.counter{
+  display: inline;
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+  margin-top: 0;
+  margin-right: 10px;
+  margin-bottom: 0px;
+}
+
+.posts li {
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+  min-height: 42px;
+  font-size: 25px;
+  font-family: 'Roboto', sans-serif;
+  list-style-type: none;
+}
+.posts {
+  clear: both;
+  list-style: none;
+  padding-left: 0;
+  width: 100%;
 }

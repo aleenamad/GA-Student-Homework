@@ -1,35 +1,43 @@
-// calling on the document and listen to key presses
-// document.addEventListener('DOMContentLoaded', function () {
-//   document.addEventListener('keyup', handleKeyPress)
+// let postThis = function () {
+//   $('#post').html("Thanks!");
+// };
+//
+// $('button').on("click", () => {
+// postThis();
 // })
 
-const options = [
-        set0 = ['Option 1','Option 2'],
-        set1 = ['First Option','Second Option','Third Option']
-    ];
+// let areaToPost = $('postingArea');
+// areaToPost.name = "myTarget";
 
-function makeUL(array) {
-    // Create the list element:
-    const list = document.createElement('ul');
 
-    for(var i = 0; i < array.length; i++) {
-        // Create the list item:
-        const item = document.createElement('li');
 
-        // Set its contents:
-        item.appendChild(document.createTextNode(array[i]));
+let main = function () {
+  $('.btn').click(function() {
+    let post = $('.comment-box').val();
+    $('<li>').text(post).prependTo('.posts');
+    $('.comment-box').val('');
+    $('.counter').text('140');
+    $('.btn').addClass('disabled');
+  });
 
-        // Add it to the list:
-        list.appendChild(item);
+  $('.comment-box').keyup(function() {
+    let postLength = $(this).val().length;
+    let charactersLeft = 140 - postLength;
+    $('.counter').text(charactersLeft);
+
+    if(charactersLeft < 0) {
+      $('.btn').addClass('disabled');
     }
+    else if(charactersLeft == 140) {
+      $('.btn').addClass('disabled');
+    }
+    else {
+      $('.btn').removeClass('disabled');
+    }
+  });
 
-    // Finally, return the constructed list:
-    return list;
+$('.btn').addClass('disabled');
+
 }
 
-// Add the contents of options[0] to #post:
-document.getElementById('post').appendChild(makeUL(options[0]));
-
-
-// Create submit button
-document.getElementById('post').click();
+$(document).ready(main);
