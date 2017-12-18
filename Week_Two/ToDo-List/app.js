@@ -29,7 +29,7 @@ $('.btn').addClass('disabled');
 }
 
 
-
+// put tasks in proper order
 $(document).ready(function($){
   $('form').submit(function() {
     if ($('.todo-box').val() !== '') {
@@ -38,13 +38,37 @@ $(document).ready(function($){
       newLi.on('click', function() {
         $(this).remove();
       });
+
+
+
       $('ol').prepend(newLi); // to put the new task on top
       $('.todo-box').val('');
       return false;
-    }
-  });
-  // $('ol').sortable();  
+//
+//       // double click to disappear already one task
+//       $(document).on('dbclick','newLi', function() {
+//         $(this).toggleClass('strike').fadeOut('.slow');
+//       });
+//
+//
+//   $('.todo-box').focus(function() {
+//     $(this).val('');
+//   });
+//
+//   $('ol').sortable();
+//
+
+}
+
 });
+
+$(document).on('dbclick', '.ol', function() {
+  $(this).toggleClass("scratch");
+});
+
+
+});
+
 
 
 
