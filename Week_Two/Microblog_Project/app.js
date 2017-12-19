@@ -40,4 +40,23 @@ $('.btn').addClass('disabled');
 
 }
 
+
+// put tasks in proper order
+$(document).ready(function($){
+  $('form').submit(function() {
+    if ($('.todo-box').val() !== '') {
+      let newTask = $('.todo-box').val();
+      let newLi = $('<li>' + newTask + '</li>');
+      newLi.on('click', function() {
+        $(this).remove();
+      });
+      $('ol').prepend(newLi); // to put the new task on top
+      $('.todo-box').val('');
+      return false;
+    }
+  });
+
+
+  });
+
 $(document).ready(main);
