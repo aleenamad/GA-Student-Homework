@@ -80,22 +80,16 @@ response.send("404, Team not found");
 
 
 
-app.get('/teams/roster/:name', (request, response) => {
-  // let nameJSON = JSON.stringify(houstonRocketsRoster)
-  for (let i=0; i<houstonRocketsRoster.length; i++){
+app.get('/teams/roster/:id', (request, response) => {
 
-
-
-    if(houstonRocketsRoster[i].name == request.params.name) {
-      response.send(houstonRocketsRoster[i]);
-    }
-
-}
-  response.send("nope");
-
+for (let i = 0; i < houstonRocketsRoster.length; i++) {
+   let houstonRocketsRosterNames = houstonRocketsRoster[i].name.toLowerCase().split(' ').join('');
+   if (Number(houstonRocketsRoster[i].id) === Number(request.params.id) || houstonRocketsRosterNames === (request.params.id).toLowerCase()) {
+     return response.send(houstonRocketsRoster[i]);
+   }
+ }
+ return response.send("This id does not exist in the system");
 });
-
-
 
 
 
