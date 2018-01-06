@@ -57,7 +57,39 @@ const houstonRocketsRoster = [
   {id: 17, name: "Troy Williams"}
 ]
 
+// Team's Stats
 
+const rocketsStats = [
+  {id: 1, name: "Ryan-Anderson", url: "http://www.nba.com/players/ryan/anderson/201583"},
+  {id: 2, name: "Trevor Ariza", url: "http://www.nba.com/players/trevor/ariza/2772"},
+  {id: 3, name: "Tarik Black", url:"http://www.nba.com/players/tarik/black/204028"},
+  {id: 4, name: "Bobby Brown", url:"http://www.nba.com/players/bobby/brown/201628"},
+  {id: 5, name: "Clint Capela", url:"http://www.nba.com/players/clint/capela/203991"},
+  {id: 6, name: "Eric Gordan", url:"http://www.nba.com/players/eric/gordon/201569"},
+  {id: 7, name: "Gerald Green", url:"http://www.nba.com/players/gerald/green/101123"},
+  {id: 8, name: "James Harden", url:"http://www.nba.com/players/james/harden/201935"},
+  {id: 9, name: "Demetrius Jackson", url:"http://www.nba.com/players/demetrius/jackson/1627743"},
+  {id: 10, name: "Luc Mbah a Moute", url:"http://www.nba.com/players/luc/mbah_a_moute/201601"},
+  {id: 11, name: "Nene", url:"http://www.nba.com/players/nene/2403"},
+  {id: 12, name: "Chinanu Onuaku", url:"http://www.nba.com/players/chinanu/onuaku/1627778"},
+  {id: 13, name: "Chris Paul", url:"http://www.nba.com/players/chris/paul/101108"},
+  {id: 14, name: "Zhou Qi", url:"http://www.nba.com/players/zhou/qi/1627753"},
+  {id: 15, name: "PJ Tucker", url:"http://www.nba.com/players/pj/tucker/200782"},
+  {id: 16, name: "Briante Weber", url:"http://www.nba.com/players/briante/weber/1627362"},
+  {id: 17, name: "Troy Williams", url:"http://www.nba.com/players/troy/williams/1627786"}
+]
+
+
+
+
+
+
+
+
+
+const jamesHardenStats = [
+  {id: 1, name: "James Harden", url: "http://www.nba.com/players/james/harden/201935"}
+]
 
 
 // put get requests here
@@ -94,9 +126,35 @@ for (let i = 0; i < houstonRocketsRoster.length; i++) {
 
 
 
-app.get('/teams/:id/Houston-Rockets/players/:id', (req, res) => res.send('James Harden'))
-app.get('/teams/:id/Houston-Rockets/players/:id/stats', (req, res) => res.send('Stats'))
-app.get('/teams/:id/Houston-Rockets/players/:id/stats/:id', (req, res) => res.send('James Harden Stats'))
+// app.get('/teams/:id/Houston-Rockets/players/:id', (req, res) => res.send('James Harden'))
+
+
+app.get('/teams/HoustonRockets/players/stats/:id', (request, response) => {
+
+  for (let i=0; i < rocketsStats.length; i++) {
+    let houstonRocketsStats = rocketsStats[i].name.toLowerCase().split(' ').join('');
+    if (Number(rocketsStats[i].id) === Number(request.params.id) || houstonRocketsStats === (request.params.id).toLowerCase()) {
+      return response.send(rocketsStats[i]);
+    }
+  }
+  return response.send('This Player isnt apart of clutch city');
+});
+
+
+
+
+
+
+
+
+
+
+
+
+app.get('/teams/:id/Houston-Rockets/players/:id/stats/:id', (req, res) => res.send(jamesHardenStats))
+
+
+
 
 
 
