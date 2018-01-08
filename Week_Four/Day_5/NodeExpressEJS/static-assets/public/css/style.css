@@ -1,0 +1,42 @@
+body{
+  margin: 0;
+  background-image: url("public/ana-pavlyuk-420815.jpg");
+
+}
+
+*{
+  box-sizing: border-box;
+}
+
+
+
+h1{
+  color: grey;
+  text-align: center;
+}
+
+h2{
+  text-align: center;
+}
+
+
+
+li {
+  list-style-type: decimal;
+  color: grey;
+
+}
+
+
+.column{
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
