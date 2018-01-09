@@ -21,11 +21,7 @@
     <div class="container">
 	<h1> <%= roster.name %> </h1>
 		<p>Positions: </p>
-      <ul class="list-group">
-    <% roster.position.forEach( (position) => { %>
-      <li class="list-group-item"> <%= position %> </li>
-    <% }) %>
-    </ul>
+    <%= roster.position %>
 		<br>
 		<a href="<%= roster.statsUrl %>"> Player's Bio </a>
   	<br>
