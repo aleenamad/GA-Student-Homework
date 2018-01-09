@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+      <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+  </head>
+  <body>
+
+
+
+
+    <nav class="navbar navbar-light bg-light">
+         <a class="navbar-brand" href="#">
+           <img src="/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+           Houston Rockets Roster
+         </a>
+       </nav>
+
+
+    <div class="container">
+
+     <ul class="list-group">
+       <% rocketsRosterArray.forEach( (roster) => { %>
+       <a href="/roster/<%= roster.id %>"><li class="list-group-item"> <%= roster.name %> | <a href="<%= roster.statsUrl %>"> Player's Bio </a> </li></a>
+       <% }) %>
+
+     </ul>
+
+
+
+     <br>
+       <div class="container">
+         <form method='POST' action='/roster'>
+           <label>Name</label>
+           <input name='name' type='text' />
+           <label>Player's Bio</label>
+           <input name='statsUrl' type='text' />
+           <input type='submit' value='Submit!' />
+         </form>
+       </div>
+  </body>
+</html>

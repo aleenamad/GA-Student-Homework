@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+  </head>
+  <body>
+
+
+
+
+    <nav class="navbar navbar-light bg-light">
+    	  <a class="navbar-brand" href="#">
+    	    <img src="/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+    	    Houston Rockets Roster
+    	  </a>
+    	</nav>
+
+    	<br>
+
+    <div class="container">
+	<h1> <%= roster.name %> </h1>
+		<p>Positions: </p>
+      <ul class="list-group">
+    <% roster.position.forEach( (position) => { %>
+      <li class="list-group-item"> <%= position %> </li>
+    <% }) %>
+    </ul>
+		<br>
+		<a href="<%= roster.statsUrl %>"> Player's Bio </a>
+  	<br>
+
+
+
+    <form action='/roster/<%=roster.id%>?_method=DELETE' method="POST">
+      <input class= "btn btn-danger" type="submit" value="Delete the Player" />
+    </form>
+
+  </body>
+</html>
