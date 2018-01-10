@@ -4,6 +4,14 @@ const morgan = require('morgan');
 const path = require('path');
 const app = express();
 const rocketsRoster = require('./routes/roster')
+// mongoose stuff
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/roster');
+
+
+
+
+
 
 
 app.use(bodyParser.json());
